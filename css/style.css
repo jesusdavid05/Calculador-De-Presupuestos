@@ -935,11 +935,14 @@ body{
     border-color: #fff;
   }
   .theme-dark {
-    background-color: #3d3935;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
   }
   .theme-dark a {
     color: #14e2cd;
+  }
+  .col a {
+    color: #000;
   }
   .theme-dark .title > strong {
     color: #14e2cd;
@@ -952,7 +955,7 @@ body{
     background-image: linear-gradient(to left, #7a56f4, #14e2cd);
   }
   .theme-dark .footer {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #3d3935);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #fff);
   }
   .theme-dark .yeeply-logo {
     color: #fff;
@@ -1397,6 +1400,12 @@ body{
       margin-right: 0;
       margin-bottom: 1em;
     }
+    .imgg {
+      width: 220px;
+      height: 220px;
+      margin-right: 0;
+      margin-bottom: 1em;
+    }
   }
   .answer.selected {
     background: rgba(255, 255, 255, 0.4);
@@ -1536,7 +1545,7 @@ body{
     right: 0;
     left: 0;
     font-size: 0.875em;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #3d392e);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #fff);
   }
   @media screen and (min-width: 678px) {
     .footer {
@@ -1545,6 +1554,8 @@ body{
   }
   .footer .footer-right {
     text-align: right;
+    font-size: 18px;
+    color: #14e2cd;
   }
   .footer .yeeply-logo {
     height: 1.5em;
