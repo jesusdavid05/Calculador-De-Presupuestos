@@ -1,11 +1,1593 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    (i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date());
+    (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga"
+  );
+
+  ga("create", "UA-35624535-10", "auto");
+  ga("send", "pageview");
+
+  ga("create", "UA-35624535-33", "auto", "multidomain");
+
+  var locationHref = window.location.href;
+  var locationOrigin = window.location.origin;
+  var urlVisitedPage = locationHref.split(locationOrigin).pop();
+  ga("multidomain.set", "dimension2", urlVisitedPage);
+  ga("multidomain.set", "dimension3", "ES");
+  ga("multidomain.set", "dimension4", "public");
+  ga("multidomain.set", "dimension5", "anonymous");
+  ga("multidomain.set", "dimension10", "CO");
+
+  ga("multidomain.set", "page", "/ccm-" + "app");
+  ga("multidomain.require", "GTM-59LM3TJ");
+  ga("multidomain.send", "pageview");
+</script>
+
+<html lang="es-CO">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+
+    <title>How much does my app cost? – Budget calculator</title>
+    <meta
+      name="description"
+      content="Calcula de forma rápida el costo de crear una app. Obtenga su presupuesto estimado de cuánto cuesta una app con este generador de precios."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="robots" content="index,follow,noodp,noydir" />
+
+    <meta name="theme-color" content="#fff" />
+
+    <link
+      rel="apple-touch-icon"
+      href="../img/app/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../img/app/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../img/app/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="mask-icon"
+      href="../img/app/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body>
-    <h1>TRABAJANDO EN ELLO</h1>
+
+  <body class="theme-dark" data-theme-color="#fff">
+    <main class="main">
+      <section class="section initial">
+        <img class="intro-image" src="../img/app/intro.png" alt="" />
+        <h1 class="title">
+          How much does it cost to develop my <strong>app</strong>?
+        </h1>
+        <p class="subtitle">
+          Quickly calculate the cost to create your app by answering these
+          simple questions.
+        </p>
+        <button class="button text-uppercase js--start">Begin</button>
+      </section>
+
+      <section
+        class="section question"
+        data-question-id="1"
+        data-pph="true"
+        style="display: none"
+      >
+        <h2 class="question-title">
+          What level of quality are you looking for?
+        </h2>
+
+        <div class="answer-group row-of-3">
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="1"
+              data-answer-weight="60"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-1-1.png"
+                alt="Calidad óptima"
+              />
+              <span class="answer-text">Optimal quality</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="2"
+              data-answer-weight="40"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-1-2.png"
+                alt="Buena relación calidad/precio"
+              />
+              <span class="answer-text">Good value for money</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="3"
+              data-answer-weight="20"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-1-3.png"
+                alt="No me importa tanto la calidad"
+              />
+              <span class="answer-text"
+                >I don't care that much about quality</span
+              >
+            </div>
+          </div>
+        </div>
+        <span class="text-bold question-progress">1/10</span>
+        <span class="text-bold price-progress js--price-progress">-</span>
+      </section>
+
+      <section
+        class="section question"
+        data-question-id="2"
+        data-pph="false"
+        style="display: none"
+      >
+        <h2 class="question-title">What type of App do you need?</h2>
+
+        <div class="answer-group row-of-4">
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="1"
+              data-answer-weight="60"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-2-1.png"
+                alt="Aplicación Android"
+              />
+              <span class="answer-text">Android application</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="2"
+              data-answer-weight="60"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-2-2.png"
+                alt="Aplicación iOS"
+              />
+              <span class="answer-text">iOS app</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="3"
+              data-answer-weight="60"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-2-3.png"
+                alt="Aplicación Windows Phone"
+              />
+              <span class="answer-text">Windows Phone app</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="4"
+              data-answer-weight="100"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-2-4.png"
+                alt="Aplicación Android + iOS"
+              />
+              <span class="answer-text">Android + iOS app</span>
+            </div>
+          </div>
+        </div>
+        <span class="text-bold question-progress">2/10</span>
+        <span class="text-bold price-progress js--price-progress">-</span>
+
+        <span class="link question-previous js--previous">← Former</span>
+      </section>
+
+      <section
+        class="section question"
+        data-question-id="3"
+        data-pph="false"
+        style="display: none"
+      >
+        <h2 class="question-title">
+          What design do you want your App to have?
+        </h2>
+
+        <div class="answer-group row-of-4">
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="1"
+              data-answer-weight="40"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-3-1.png"
+                alt="Interfaz sencilla"
+              />
+              <span class="answer-text">Simple interface</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="2"
+              data-answer-weight="120"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-3-2.png"
+                alt="Interfaz personalizada"
+              />
+              <span class="answer-text">Custom interface</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="3"
+              data-answer-weight="80"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-3-3.png"
+                alt="Interfaz replicada de la web"
+              />
+              <span class="answer-text">Replicated web interface</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="4"
+              data-answer-weight="0"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-3-4.png"
+                alt="No necesito diseño"
+              />
+              <span class="answer-text">I don't need design</span>
+            </div>
+          </div>
+        </div>
+        <span class="text-bold question-progress">3/10</span>
+        <span class="text-bold price-progress js--price-progress">-</span>
+
+        <span class="link question-previous js--previous">← Former</span>
+      </section>
+
+      <section
+        class="section question"
+        data-question-id="4"
+        data-pph="false"
+        style="display: none"
+      >
+        <h2 class="question-title">How do you want to benefit from your App?</h2>
+
+        <div class="answer-group row-of-4">
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="1"
+              data-answer-weight="5"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-4-1.png"
+                alt="Aplicación gratuita con publicidad"
+              />
+              <span class="answer-text"
+                >Free app with advertising</span
+              >
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="2"
+              data-answer-weight="5"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-4-2.png"
+                alt="Aplicación de pago"
+              />
+              <span class="answer-text">Payment application</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="3"
+              data-answer-weight="40"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-4-3.png"
+                alt="Compras dentro de la app"
+              />
+              <span class="answer-text">In-app purchases</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="4"
+              data-answer-weight="10"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-4-4.png"
+                alt="Otros / No lo sé todavía"
+              />
+              <span class="answer-text">Others / I don't know yet</span>
+            </div>
+          </div>
+        </div>
+        <span class="text-bold question-progress">4/10</span>
+        <span class="text-bold price-progress js--price-progress">-</span>
+
+        <span class="link question-previous js--previous">← Former</span>
+      </section>
+
+      <section
+        class="section question"
+        data-question-id="5"
+        data-pph="false"
+        style="display: none"
+      >
+        <h2 class="question-title">Does your App need a login system?</h2>
+
+        <div class="answer-group row-of-4">
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="1"
+              data-answer-weight="40"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-5-1.png"
+                alt="Sí, con redes sociales y email"
+              />
+              <span class="answer-text">Yes, with social networks and email</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="2"
+              data-answer-weight="25"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-5-2.png"
+                alt="Sí, con email"
+              />
+              <span class="answer-text">Yes, with email</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="3"
+              data-answer-weight="0"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-5-3.png"
+                alt="No"
+              />
+              <span class="answer-text">No</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="4"
+              data-answer-weight="20"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-5-4.png"
+                alt="No lo sé todavía"
+              />
+              <span class="answer-text">I do not know yet</span>
+            </div>
+          </div>
+        </div>
+        <span class="text-bold question-progress">5/10</span>
+        <span class="text-bold price-progress js--price-progress">-</span>
+
+        <span class="link question-previous js--previous">← Former</span>
+      </section>
+
+      <section
+        class="section question"
+        data-question-id="6"
+        data-pph="false"
+        style="display: none"
+      >
+        <h2 class="question-title">
+          Does your App have to be integrated with a website?
+        </h2>
+
+        <div class="answer-group row-of-3">
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="1"
+              data-answer-weight="40"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-6-1.png"
+                alt="Sí"
+              />
+              <span class="answer-text">Yes</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="2"
+              data-answer-weight="0"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-6-2.png"
+                alt="No"
+              />
+              <span class="answer-text">No</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="3"
+              data-answer-weight="20"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-6-3.png"
+                alt="No lo sé"
+              />
+              <span class="answer-text">Don't know</span>
+            </div>
+          </div>
+        </div>
+        <span class="text-bold question-progress">6/10</span>
+        <span class="text-bold price-progress js--price-progress">-</span>
+
+        <span class="link question-previous js--previous">← Former</span>
+      </section>
+
+      <section
+        class="section question"
+        data-question-id="7"
+        data-pph="false"
+        style="display: none"
+      >
+        <h2 class="question-title">
+          Do users have their own profiles?
+        </h2>
+
+        <div class="answer-group row-of-3">
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="1"
+              data-answer-weight="40"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-7-1.png"
+                alt="Sí"
+              />
+              <span class="answer-text">Yes</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="2"
+              data-answer-weight="0"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-7-2.png"
+                alt="No"
+              />
+              <span class="answer-text">No</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="3"
+              data-answer-weight="20"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-7-3.png"
+                alt="No lo sé"
+              />
+              <span class="answer-text">Don't know</span>
+            </div>
+          </div>
+        </div>
+        <span class="text-bold question-progress">7/10</span>
+        <span class="text-bold price-progress js--price-progress">-</span>
+
+        <span class="link question-previous js--previous">← Former</span>
+      </section>
+
+      <section
+        class="section question"
+        data-question-id="8"
+        data-pph="false"
+        style="display: none"
+      >
+        <h2 class="question-title">
+          Does your app need an administration panel?
+        </h2>
+
+        <div class="answer-group row-of-3">
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="1"
+              data-answer-weight="40"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-8-1.png"
+                alt="Sí"
+              />
+              <span class="answer-text">Yes</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="2"
+              data-answer-weight="0"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-8-2.png"
+                alt="No"
+              />
+              <span class="answer-text">No</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="3"
+              data-answer-weight="20"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-8-3.png"
+                alt="No lo sé"
+              />
+              <span class="answer-text">Don't know</span>
+            </div>
+          </div>
+        </div>
+        <span class="text-bold question-progress">8/10</span>
+        <span class="text-bold price-progress js--price-progress">-</span>
+
+        <span class="link question-previous js--previous">← Former</span>
+      </section>
+
+      <section
+        class="section question"
+        data-question-id="9"
+        data-pph="false"
+        style="display: none"
+      >
+        <h2 class="question-title">What languages will your app use?</h2>
+
+        <div class="answer-group row-of-3">
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="1"
+              data-answer-weight="0"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-9-1.png"
+                alt="Un único idioma"
+              />
+              <span class="answer-text">A single language</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="2"
+              data-answer-weight="20"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-9-2.png"
+                alt="Bilingüe"
+              />
+              <span class="answer-text">Bilingual</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="3"
+              data-answer-weight="40"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-9-3.png"
+                alt="Multilingüe"
+              />
+              <span class="answer-text">Multilingual</span>
+            </div>
+          </div>
+        </div>
+        <span class="text-bold question-progress">9/10</span>
+        <span class="text-bold price-progress js--price-progress">-</span>
+
+        <span class="link question-previous js--previous">← Former</span>
+      </section>
+
+      <section
+        class="section question"
+        data-question-id="10"
+        data-pph="false"
+        style="display: none"
+      >
+        <h2 class="question-title">What status is your project in?</h2>
+
+        <div class="answer-group row-of-4">
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="1"
+              data-answer-weight="0"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-10-1.png"
+                alt="Sólo es una idea"
+              />
+              <span class="answer-text">It's just an idea</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="2"
+              data-answer-weight="0"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-10-2.png"
+                alt="Boceto ya preparado"
+              />
+              <span class="answer-text">Ready-made sketch</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="3"
+              data-answer-weight="0"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-10-3.png"
+                alt="App en desarrollo"
+              />
+              <span class="answer-text">App in development</span>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="answer js--answer"
+              data-answer-id="4"
+              data-answer-weight="0"
+            >
+              <img
+                class="answer-image js--answer-image"
+                src="../img/app/intro.png"
+                data-src="../img/app/answer-10-4.png"
+                alt="App ya desarrollada"
+              />
+              <span class="answer-text">App already developed</span>
+            </div>
+          </div>
+        </div>
+        <span class="text-bold question-progress">10/10</span>
+        <span class="text-bold price-progress js--price-progress">-</span>
+
+        <span class="link question-previous js--previous">← Former</span>
+      </section>
+
+      <section class="section results" style="display: none">
+        <p class="intro">Good! We're done!</p>
+
+        <h3>Share us if you liked it!</h3>
+        <div class="results-share">
+          <div
+            id="share"
+            data-url="https://www.cuantocuestamiapp.co"
+            data-facebook="Share"
+            data-twitter="Tweet"
+            data-twitter_text="Calcula de forma sencilla el coste para crear una #App con @teento_ES. Obtén un #presupuesto estimado al instante en"
+            data-linkedIn="LinkedIn"
+            data-google="Google +"
+          ></div>
+        </div>
+
+        <h2>
+          The estimated cost of your app is<br />
+          <span class="claim">
+            <span class="js--total-price">-</span>
+          </span>
+        </h2>
+
+        <div class="results-container">
+          <p><span class="link js--toggle-results">Edit answers</span></p>
+          <ul class="results-summary js--results-summary">
+            <li class="result js--result" data-question-id="1">
+              <img
+                class="result-image js--result-image"
+                src="../img/app/answer-1-1.png"
+                alt=""
+              />
+              <div class="result-body">
+                <span class="result-question"
+                  >What level of quality are you looking for?</span
+                >
+                <span>
+                  <b class="result-answer js--result-answer"></b>&nbsp;
+                  <span class="result-change js--change">Change</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="result js--result" data-question-id="2">
+              <img
+                class="result-image js--result-image"
+                src="../img/app/answer-1-1.png"
+                alt=""
+              />
+              <div class="result-body">
+                <span class="result-question">What type of App do you need?</span>
+                <span>
+                  <b class="result-answer js--result-answer"></b>&nbsp;
+                  <span class="result-change js--change">Change</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="result js--result" data-question-id="3">
+              <img
+                class="result-image js--result-image"
+                src="../img/app/answer-1-1.png"
+                alt=""
+              />
+              <div class="result-body">
+                <span class="result-question"
+                  >What design do you want your App to have?</span
+                >
+                <span>
+                  <b class="result-answer js--result-answer"></b>&nbsp;
+                  <span class="result-change js--change">Change</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="result js--result" data-question-id="4">
+              <img
+                class="result-image js--result-image"
+                src="../img/app/answer-1-1.png"
+                alt=""
+              />
+              <div class="result-body">
+                <span class="result-question"
+                  >How do you want to benefit from your App?</span
+                >
+                <span>
+                  <b class="result-answer js--result-answer"></b>&nbsp;
+                  <span class="result-change js--change">Change</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="result js--result" data-question-id="5">
+              <img
+                class="result-image js--result-image"
+                src="../img/app/answer-1-1.png"
+                alt=""
+              />
+              <div class="result-body">
+                <span class="result-question"
+                  >Does your App need a login system?</span
+                >
+                <span>
+                  <b class="result-answer js--result-answer"></b>&nbsp;
+                  <span class="result-change js--change">Change</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="result js--result" data-question-id="6">
+              <img
+                class="result-image js--result-image"
+                src="../img/app/answer-1-1.png"
+                alt=""
+              />
+              <div class="result-body">
+                <span class="result-question"
+                  >Does your App have to be integrated with a website?</span
+                >
+                <span>
+                  <b class="result-answer js--result-answer"></b>&nbsp;
+                  <span class="result-change js--change">Change</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="result js--result" data-question-id="7">
+              <img
+                class="result-image js--result-image"
+                src="../img/app/answer-1-1.png"
+                alt=""
+              />
+              <div class="result-body">
+                <span class="result-question"
+                  >Do users have their own profiles?</span
+                >
+                <span>
+                  <b class="result-answer js--result-answer"></b>&nbsp;
+                  <span class="result-change js--change">Change</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="result js--result" data-question-id="8">
+              <img
+                class="result-image js--result-image"
+                src="../img/app/answer-1-1.png"
+                alt=""
+              />
+              <div class="result-body">
+                <span class="result-question"
+                  >Does your app need an administration panel?</span
+                >
+                <span>
+                  <b class="result-answer js--result-answer"></b>&nbsp;
+                  <span class="result-change js--change">Change</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="result js--result" data-question-id="9">
+              <img
+                class="result-image js--result-image"
+                src="../img/app/answer-1-1.png"
+                alt=""
+              />
+              <div class="result-body">
+                <span class="result-question"
+                >What languages will your application use?</span
+                >
+                <span>
+                  <b class="result-answer js--result-answer"></b>&nbsp;
+                  <span class="result-change js--change">Change</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="result js--result" data-question-id="10">
+              <img
+                class="result-image js--result-image"
+                src="../img/app/answer-1-1.png"
+                alt=""
+              />
+              <div class="result-body">
+                <span class="result-question"
+                  >What status is your project in?</span
+                >
+                <span>
+                  <b class="result-answer js--result-answer"></b>&nbsp;
+                  <span class="result-change js--change">Change</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <p>
+          At teento we select the best
+          <strong>app and website developers</strong> for your project.
+          Post your project on teento or check out some of our
+          <a
+            href="https://www.yeeply.com/clientes?utm_source=CCMA-CO&utm_medium=stories&utm_campaign=microsites"
+            rel="nofollow"
+            >success stories</a
+          >.
+        </p>
+
+        <a class="button js--start-project" href="" rel="nofollow">
+          Create your project
+        </a>
+
+        <span class="link results-restart js--restart">← Start over</span>
+      </section>
+
+      <div class="more more-info">
+        <div class="full-more-info">
+          <section class="more-content">
+            <h2>How much does it cost to make an app?</h2>
+
+            <p>
+              Are you wondering how much it would cost to create your app?
+               Then you are in the right place! This is a tool
+               digital powered by teento that you can use, so
+               totally free, for
+               <strong>calculate the cost of your application</strong>.
+            </p>
+            <p>
+              It is very simple to use. First, click on the button
+               of "Calculate cost". Next you will have to answer some
+               questions with details of the application you have in mind. In
+               total will take you about a minute and as a result you will obtain
+               a
+               <strong
+                 >approximate budget for the development of your
+                 application.</strong
+               >
+            </p>
+            <p>
+              However, remember that this result will only be an estimate,
+              since there are many factors that will affect the final price of your
+              app. For example, it is not the same to create a
+              <b>native application</b> than creating a
+              <b>cross-platform app</b> or a <b>web app</b>.
+            </p>
+            <p>
+              We want to help you make the right decision! That's why it continues
+               reading to review some elements that affect the price of your
+               application.👇
+            </p>
+
+            <h2>Factors that influence the cost of an app</h2>
+            <p>
+              Keep all the factors on this list in mind when
+               <strong>calculate how much it costs to make an app</strong>:
+            </p>
+            <ul>
+              <li>
+                <b>Functionalities</b>: the more complex your app is, the more
+                 It will be expensive to develop. For example, if you want to add to your
+                 app a messaging system, like a real-time chat
+                 with multimedia content, or a record that allows login
+                 through email or social networks, you will probably end up leaving
+                 more expensive. Therefore, first assess what
+                 features are important and which ones can wait for
+                 upcoming app reviews.
+              </li>
+              <li>
+                <b>Quality</b>: an app with many details is an app that
+                 It will require more work from the developers.
+                 It may be worth it if you want your application to look good,
+                 but keep in mind that this will have a cost.
+              </li>
+              <li>
+                <b>Time</b>: when do you need to have your application ready?
+                 Are you going to be flexible with the delivery date? If it is a
+                 urgent project that you need to have ready by a date
+                 specifically, the price may be higher. How much more
+                 The more flexible you are with the delivery date, the more economical the delivery will be.
+                 project.
+              </li>
+              <li>
+                <b>Launch Cost</b>: If your app is not a
+                internal application and is aimed at the end consumer, you will have to
+                make sure he finds it. Upload it to the App Store or
+                Google Play Store is not always enough! You will need a
+                marketing strategy to give visibility to your app and make
+                an ASO campaign. This, of course, has a cost that you must
+                consider.
+              </li>
+              <li>
+                <b>Maintenance cost</b>: even when your application is
+                 finished you will still need some technical support. Think that
+                 The world of mobile technology is advancing very quickly and you
+                 application cannot become outdated. For this reason surely
+                 you will need to hire a bag maintenance service
+                 hours that will help you adapt your app to new devices,
+                 new screen sizes, new hardware… It is also
+                 will be responsible for resolving any errors that arise.
+              </li>
+              <li>
+                <b>Other additional costs</b>: such as, for example, the cost of
+                 upload the application to the download marketplaces. For the App
+                 iOS Store you will have to pay an annual fee while in the
+                 Play Store you will only need to make a single payment for each
+                 app you upload.
+              </li>
+            </ul>
+
+            <h2>How much does it cost to create an app depending on the type of development</h2>
+            <p>
+              When you start talking to a development team, these are
+               They will present several options for the design of your app. There are three
+               types of development that you should know:
+            </p>
+            <ul>
+              <li>
+                <b>Native application</b>. These apps are developed
+                specifically for an operating system, such as iOS, Android or
+                Windows. They usually have good performance because they are made to order.
+                extent. The downside is that if you want your application
+                works on several operating systems you will have to prepare a
+                development for each of them. This will increase the budget
+                of your application.
+              </li>
+              <li>
+                <b>Cross-platform application</b>. In this case, the application
+                It could be used on any operating system, since the
+                code is prepared for it. The disadvantage of this type
+                of apps is that they have limited access to hardware (such as
+                example the camera or GPS) and are usually a little slower.
+                As an advantage, by requiring only one code, development is more
+                fast and less expensive.
+              </li>
+              <li>
+                <b>Web app</b>. This last type of application also works
+                 on multiple devices as it loads through a browser
+                 from Internet. Because of this it is not necessary to download it. Of the
+                 In the same way that happens with cross-platform apps, these
+                 Applications may have limited access to the hardware of the
+                 device.
+              </li>
+            </ul>
+            <p>
+              Each of these three options has its advantages and disadvantages.
+               and of course a very different development cost. Does not exist
+               a correct option: you must choose the one that best suits your needs.
+               needs.
+            </p>
+            <p>
+              For example, if your application is going to be used by many
+              users, it is best to create a <b>native app</b>, although its
+              cost is a little higher; while if it is going to be used
+              for fewer users, as would happen with an internal app for a
+              company, you can opt for a <b>multiplatform app</b>.
+            </p>
+
+            <h2>
+              How much does it cost to develop an app depending on the operating system
+            </h2>
+            <p>
+              Another decision you must make when developing an app
+               to improve your business is what <b>operating system</b> you want
+               to be shown.
+            </p>
+            <p>
+              The cost of your app will be different depending on whether it is created
+              for <b>iOS, Android or Windows Phone</b>. It will also be very
+              different if you decide that your application should be viewed on multiple
+              operating systems. If you have not yet made this decision, do not
+              Don't worry: it's best to talk to an expert so they can help you.
+              advise.
+            </p>
+            <p>
+              Our recommendation? That you bet on a development that
+              <b>adapts to any operating system</b>. Although the expense
+              may be a little higher, if you think in the long term you
+              It will end up being profitable. This is because it is cheaper to make
+              This cross-platform development initially requires
+              do them later and separately.
+            </p>
+            <p>
+              The hourly price of a developer is not the same for
+               any operating system. At the moment,
+               <b
+                 >it is more expensive to hire a native developer to
+                 iOS
+               >
+               than this same profile for Android since the average price that
+               They charge per hour of work is higher. Furthermore, for anyone
+               Of the two cases, the development will be more expensive if you do it at
+               through a development company instead of with a freelancer.
+            </p>
+
+            <h2>What is the estimated time to develop an application?</h2>
+            <p>
+              <b>Developing an application is not a matter of days</b>. As already
+               You will have realized with everything we have explained, first
+               you must make many decisions (type of development, type of app,
+               OS…). When all this is clear, you can move on to
+               the design phase and work on mockups and wireframes. These
+               Materials will then pass into the hands of the development team. In
+               This point will start programming the application, which
+               will end when the testing and correction phases are passed.
+               failures.
+            </p>
+            <p>
+              The average development time for an application is
+              <b>18 weeks</b>, although this is just an estimate. Each
+              application is a world.
+            </p>
+            <p>
+              Therefore, it is best that you speak clearly with your team.
+               development if you have a deadline that must be met. Leaves
+               Of course, that delivery date is essential for them to
+               can organize a <b>delivery schedule</b> that will be very
+               useful for tracking and ensuring that each phase of the
+               project is completed within the scheduled time.
+            </p>
+
+            <h2>Is it a good idea to offer your app for free?</h2>
+            <p>
+              If you are creating an app for the end consumer (rather than a
+               internal app, for example), surely you have stopped to think about its
+               monetization. Start by
+               <b>analyze your competitors in depth</b> and see what they are doing
+               doing.
+            </p>
+            <p>
+              What happens if your competitors offer a similar app for free?
+               free? If this is your case, the best option is for you to do it too.
+               do to have more download possibilities. There are others
+               ways to monetize your app such as
+               <b>through advertisements</b>.
+            </p>
+            <p>
+              But if you finally decide to charge for downloading your app,
+              Make sure this charge is justified. Make it very clear in the
+              description of the market the benefits obtained with that payment
+              and make sure you set a fair price.
+            </p>
+
+            <h2>Benefits of making an app for your business</h2>
+            <p>
+              There are many reasons why you can start making a
+               app for your business. These are some:
+            </p>
+            <ul>
+              <li>
+                An app is the best solution if your clientele needs
+                <b>book an appointment</b> with you to be attended to. you won't lose
+                your time answering phone calls, you will save time and
+                It will make the job much easier.
+              </li>
+              <li>
+                If your business requires <b>internal management</b> through
+                 various tools or on paper an app is a very good idea to
+                 <b>coordinate your company</b> in a centralized and simple way.
+              </li>
+              <li>
+                Another reason is that you need an app to give
+                 <b>added value</b> to your users and/or business.
+              </li>
+            </ul>
+
+            <h3>Can an app be the solution to any of my problems?</h3>
+            <p>
+              Absolutely yes. Apps have been with us constantly for
+               years. In our homes we have at least one device
+               intelligent. This makes applications a
+               <b>direct communication channel</b> between businesses and clients
+               potentials. For this reason you should take advantage of its peak.
+            </p>
+
+            <h3>
+              <a
+                href="https://www.yeeply.com/blog/cuando-necesita-empresa-aplicacion-movil/?utm_source=CCMA-CO&utm_medium=modal&utm_campaign=microsites"
+                target="_blank"
+                rel="nofollow"
+                >How do I know if my company needs an app?</a
+              >
+            </h3>
+            <p>
+              If you want your company to run smoothly, first of all you must
+               Discover what your <b>weak points</b> are. It is possible that
+               You discover that an app may be the solution for some of them.
+            </p>
+            <p>
+              To start, carry out a <b>competition study</b> without
+               Think about the cost of the mobile application. Check, for
+               For example, if they have apps to work on different services
+               that are still managed offline.
+            </p>
+            <p>
+              At this time, we have the possibility of acquiring a large
+              number of applications for management and a
+              <b>custom mobile application</b> can add value to your
+              business. This first phase of analysis will give you a better
+              definition for any project and in this way the budget
+              necessary of the mobile application will be more valid.
+            </p>
+            <p>
+              Depending on your problem, you will be looking for one or another solution.
+               <b>We present some of the solutions</b> so that they can
+               use it as an example and that you can read in the following
+              <a
+                href="https://www.yeeply.com/blog/que-app-para-empresas-te-conviene/?utm_source=CCMA-CO&utm_medium=modal&utm_campaign=microsites"
+                target="_blank"
+                rel="nofollow"
+                >trento blog article</a
+              >.
+            </p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <h3>PROBLEM DETECTED</h3>
+                  </th>
+                  <th>
+                    <h3>APP TYPE / SOLOBJECTIVE TO ACHIEVEUTION</h3>
+                  </th>
+                  <th>
+                    <h3>OBJECTIVE TO ACHIEVE</h3>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Slow report management</td>
+                  <td>Management apps</td>
+                  <td>Manage reports</td>
+                </tr>
+                <tr>
+                  <td>
+                    Abandoned purchases and short visits on mobile devices
+                  </td>
+                  <td>Apps m-commerce</td>
+                  <td>Increase sales from mobile devices</td>
+                </tr>
+                <tr>
+                  <td>Inefficient organization of shifts and vacations</td>
+                  <td>Internal communication</td>
+                  <td>More effective organization</td>
+                </tr>
+                <tr>
+                  <td>
+                    Slow internal communications and on different channels
+                  </td>
+                  <td>Instant messaging</td>
+                  <td>Centralized and homogeneous communication</td>
+                </tr>
+                <tr>
+                  <td>Few customers buy a second time</td>
+                  <td>User loyalty</td>
+                  <td>Get recurring clients</td>
+                </tr>
+                <tr>
+                  <td>Slow generation of invoices to clients</td>
+                  <td>Complementary service to clients</td>
+                  <td>Automatically send invoices to customers</td>
+                </tr>
+                <tr>
+                  <td>The brand is not perceived as modern or innovative</td>
+                  <td>Branding App</td>
+                  <td>Improve the brand image, more innovative and mobile</td>
+                </tr>
+                <tr>
+                  <td>Need to continually train workers</td>
+                  <td>Internal training app</td>
+                  <td>
+                    Short courses through the app to train students
+                     workers
+                  </td>
+                </tr>
+                <tr>
+                  <td>Another problem detected</td>
+                  <td>Consulting to find a tailored solution</td>
+                  <td>Create a custom app or mobile project</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Options to make an app</h2>
+            <p>
+              Is the form of development that interests you a little clearer?
+              for your application and you know how much it costs to create an app
+              approximately? If the answer is yes, perhaps it has arrived
+              It's time to get started with the next step:
+              <b>get started with your mobile application project</b>.
+            </p>
+            <p>
+              On the internet you will find different
+              <b>tools to make apps for free and easy</b>,
+              but the problem is that the final result is not at all
+              professional —although for a first prototype of your idea it can
+              worth it—
+            </p>
+            <p>
+              If you really need a mobile app for your business and get
+               profitability of your time and your money,
+               <b>the best option is to leave it in the hands of professionals</b>. Tea
+               We show three options, but first we will explain the
+               different profiles of professionals who work in the creation
+               of a mobile application.
+            </p>
+            <p>
+              We have already explained to you how important it is to have the
+               best developers for the development of your project,
+               but it is by no means the only profile that will be part of the
+               Complete development of your application.
+            </p>
+            <p>
+              First, the <b>design team</b> will develop the
+              visual appearance of the app before sending it to the team
+              development. It will not only be in charge of the graphic aspect of the app.
+              In addition, the user interface (<b>UI</b>) and the
+              usability (<b>UX</b>) to ensure that everything flows
+              correctly in the final version of the mobile application. exist
+              great and qualified professionals who are specifically
+              specialized in these two areas.
+            </p>
+            <p>
+              Later, when the design is finalized, it will go to the
+               next level with the <b>development team</b>. Oneself
+               Developer cannot make any type of app! The
+               programming languages are very different from each other. So in
+               Depending on the type of mobile app you need for your project,
+               It is better to find the right developer for this.
+            </p>
+            <p>
+              Finally, as we talked about previously, you must have
+              a studied marketing strategy, if your app is B2C, to
+              get your potential clients to download the application. In
+              At this point you will need a <b>marketing team</b>,
+              specialists in ASO, SEM, SEO, campaigns...
+            </p>
+            <p>
+              <b>Where are these profiles located?</b> Now you
+              We will show three different ones, each of which, just as
+              You will check, they will show you different budgets.
+            </p>
+
+            <h3>Option 1: Freelance</h3>
+            <p>
+              This profile may be the ideal option if your project is not
+              large scale, on various online platforms you can find
+              <b>different freelance professionals</b> who, in addition, will have
+              of references from clients who have worked and deposited their
+              trust in them.
+            </p>
+            <p>
+              It is possible that an app developed by
+              a freelancer, but you can also find many
+              disadvantages. On the one hand, there is high competition between
+              professionals in this development sector. On the other hand, the
+              The budgets they prepare are usually low, so that they are
+              attractive, and finally you pay for it with the final quality of your
+              mobile application project.
+            </p>
+            <p>
+              Another problem that will arise if you need several professionals
+               for your project...<b>How do you intend to coordinate them all?</b>
+               Are they going to understand each other? Can you take on all the work
+               necessary to coordinate them yourself? If you don't have time to
+               Don't worry, we have two other options.
+            </p>
+
+            <h3>Option 2: App development agency</h3>
+            <p>
+              App development agencies are specialized in
+               technological products like the one you want to create and, therefore,
+               <b>they have all the necessary profiles you need</b>.
+               This type of agency has a much higher cost than the previous one.
+               option, hire a freelancer, but they have some advantages.
+            </p>
+            <p>
+              First of all, you will always be with the
+               <b>same supplier</b>. This will give you more time to
+               supervise the project completely, it will be comfortable and will allow you
+               Be more focused in all phases of the process. Your experience
+               is easily validated (ask them for previous apps jobs
+               mobile phones they have developed!).
+            </p>
+            <p>
+              The <b>high budget</b> presented by these agencies is the
+               main drawback and they are not usually very flexible, so
+               Any modification you need in your project will not
+               It will be economical.
+            </p>
+
+            <h3>Option 3: Marketplace</h3>
+            <p>
+              Marketplaces are a type of website where you can
+               find technology services and
+               <b>subcontract one or more teams</b> for the preparation
+               complete your project without worrying about anything. teento is a good
+               marketplace example, this is how it works:
+            </p>
+            <ul>
+              <li>
+                <b>Publish your project</b>, with all the details you need
+                 possible.
+              </li>
+              <li>
+                Studying your complete needs, deadlines and budget
+                 included, we will contact the <b>appropriate team</b> for you and
+                 we will connect you with it.
+              </li>
+              <li>
+                Once your project is clear and you agree with your team
+                assigned, they will send you a <b>financial proposal</b>. Whether
+                adapts to your needs, you will start working together! Yes of
+                Otherwise an agreement has not been possible, we will request a
+                budget to a different team.
+              </li>
+            </ul>
+            <p>
+              The greatest advantage of leaving everything in teento's hands is that
+              You won't have to worry about anything. You won't waste time on
+              look for the best team since all our professionals have
+              a <b>certification process</b>. Our way of working will
+              that you connect with the best professionals you need for your
+              project.
+            </p>
+            <p>
+              With teento you will work with
+              <b>professionals of any specialty</b> and all this with a
+              only partner. The variety and relocation of professionals
+              Our platform makes it easy for us to offer you the adapted budget
+              to your needs.
+            </p>
+
+            <h2>How to start your project with teento?</h2>
+            <p>
+              Are you ready to get started? Tell us what you need to
+              launch your app project in the following
+              <a
+                href="https://www.yeeply.com/?utm_source=CCMA-CO&utm_medium=modal&utm_campaign=microsites#publish-project"
+                target="_blank"
+                rel="nofollow"
+                >link</a
+              >. We simply need you to answer the questions
+              form enabled for this.
+            </p>
+            <p>
+              Once we receive the form we will contact you to
+               resolve any questions that may arise.
+              <b
+                >We will always be with you, helping you so that your decision is the right one.
+                correct</b
+              >. We have extensive experience in the technology sector and
+              mainly application development.
+            </p>
+            <p>
+              More than 750 businesses and companies have trusted us, we have
+              carried out more than 1,000 projects, mainly apps
+              mobiles of all styles. If you wish, you can check
+              through this
+              <a
+                href="https://www.yeeply.com/clientes/?utm_source=CCMA-CO&utm_medium=modal&utm_campaign=microsites"
+                target="_blank"
+                rel="nofollow"
+                >link</a
+              >
+              the companies and businesses that trust us. Do you want you
+              project idea become a reality?
+              <b
+                >With our experience and work we help you for any
+                application</b
+              >. You dare?
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-right about">
+        <div class="made-by">
+          <strong>teento</strong>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="config"
+      data-type="app"
+      data-lang="es-CO"
+      data-pph="30"
+      data-multi=""
+      data-curr-symbol="COP"
+      data-curr-symbol-before="false"
+      data-curr-thousands="."
+      data-curr-decimal=","
+      data-curr-exchange="2500"
+    ></div>
+
+    <script src="../js/main.js"></script>
   </body>
 </html>
