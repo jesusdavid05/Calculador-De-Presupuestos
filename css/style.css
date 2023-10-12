@@ -797,8 +797,8 @@ body{
   body {
     font-family: sans-serif;
     font-size: 16px;
-    background-color: #f3f5f9;
-    color: #3d3935;
+    background-color: #3d3935;
+    color: #fff;
   }
   .fonts-loaded body {
     font-family: "Gotham Rounded";
@@ -935,14 +935,14 @@ body{
     border-color: #fff;
   }
   .theme-dark {
-    background-color: #fff;
-    color: #000;
+    background-color: #3d3935;
+    color: #fff;
   }
   .theme-dark a {
     color: #14e2cd;
   }
   .col a {
-    color: #000;
+    color: #fff;
   }
   .theme-dark .title > strong {
     color: #14e2cd;
@@ -955,7 +955,7 @@ body{
     background-image: linear-gradient(to left, #7a56f4, #14e2cd);
   }
   .theme-dark .footer {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #fff);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #3d3935);
   }
   .theme-dark .yeeply-logo {
     color: #fff;
